@@ -1,0 +1,21 @@
+{
+  "icons": [
+    {
+      "src": "./img/favicon/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "./img/favicon/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./img/favicon/apple-touch-icon.png",
+      "type": "image/png"
+    }
+  ],
+  "name": "Проект 'Smart Device'",
+  "short_name": "'SmartDevice'",
+  "description": "Интерент-магазин"
+}
