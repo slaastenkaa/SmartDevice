@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  display: flex;
+  min-height: 120px;
+  width: 100%;
+  background: $black-to-black-pearl;
+}
+
+@media (max-width: $vp-1023) {
+  .header {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: $vp-767) {
+  .header {
+    min-height: 70px;
+  }
+}

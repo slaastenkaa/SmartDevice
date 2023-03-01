@@ -1,0 +1,112 @@
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  transform: translate(0, 30px);
+}
+
+.nav__logo--img {
+  transition: all 0.5s ease-in-out;
+}
+
+.nav__logo--img:hover,
+.nav__logo--img:focus {
+  opacity: 0.8;
+  transform: scale3d(1.02, 1.02, 1.02);
+}
+
+.nav__logo--img:active {
+  opacity: 0.6;
+  transform: none;
+}
+
+.nav__list {
+  display: flex;
+  transform: translate(3.7vw, 15px);
+  gap: 6.35vw;
+}
+
+.nav__item--link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: $fz-default;
+  line-height: 18px;
+  color: $alice-blue-second;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav__item--link:hover,
+.nav__item--link:focus {
+  opacity: 0.8;
+  transform: scale3d(1.02, 1.02, 1.02);
+}
+
+.nav__item--link:active,
+.nav__item--link:active .nav__item--icon {
+  color: $light-shade-of-gray-opacity;
+  transform: none;
+}
+
+.nav__item--icon {
+  color: $deep-sky-blue;
+}
+
+.nav__button {
+  margin-left: auto;
+  transform: translate(-61px, 5px);
+  padding: 9px 17px 12.8px;
+  color: $alice-blue-second;
+  border: 1px solid $alice-blue-second;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav__button:hover,
+.nav__button:focus {
+  background: $deep-sky-blue;
+  border: 1px solid $deep-sky-blue;
+}
+
+.nav__button:active {
+  opacity: 0.8;
+  transform: translate(-61px, 5px) scale3d(1.02, 1.02, 1.02);
+}
+
+@media (max-width: $vp-1023) {
+  .header__nav {
+    grid-template-columns: 1fr 2fr;
+    transform: translate(0, 20px);
+  }
+
+  .nav__list {
+    margin-left: auto;
+    transform: translate(-29px, 11px);
+    gap: 5.35vw;
+  }
+
+  .nav__item--text,
+  .nav__button {
+    display: none;
+  }
+}
+
+@media (max-width: $vp-767) {
+//   .logo__smartdevice {
+//     display: none;
+//   } не удаляется текст из svg
+  .header__nav {
+    transform: translate(0, 16px);
+  }
+
+  .nav__logo--img {
+    width: 35px;
+    height: auto;
+  }
+
+  .nav__list {
+    transform: translate(-20px, 4px);
+    gap: 11.4vw;
+  }
+}

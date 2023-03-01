@@ -17,21 +17,44 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="container">
+          <nav class="header__nav nav">
+            <a class="nav__logo link" href="./index.html">
+              <picture class="nav__logo--picture">
+                <source media="(max-width: 767px)" srcset="./img/svg/logo-smart-device-mobil.svg">
+                <img class="nav__logo--img" src="./img/svg/logo-smart-device.svg" width="215" height="55" alt="Логотип интернет-магазина 'Smart Device'">
+              </picture>
+            </a>
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__item--link link" href="mailto:info@sd.ru">
+                  <svg class="nav__item--icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-email"></use>
+                  </svg>
+                  <span class="nav__item--text">info@sd.ru</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item--link link" href="tel:+74950005252">
+                  <svg class="nav__item--icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-phone-call"></use>
+                  </svg>
+                  <span class="nav__item--text">+7 (495) 000 52 52</span>
+                </a>
+              </li>
+            </ul>
+            <button class="nav__button button">Заказать звонок</button>
+          </nav>
+        </div>
       </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section>
+      <main class="main">
+        <picture>
+                <source type="image/webp" srcset="../img/main-block-background.webp, ./img/main-block-background@2x.webp 2x">
+                <img src="./img/main-block-background.jpg" loading="lazy" srcset="./img/main-block-background@2x.jpg 2x" width="1920" height="880" alt="Фон главного блока Smart Device">
+              </picture>
       </main>
-      <footer>
+      <footer class="footer">
         <div class="container"></div>
       </footer>
     </div>
