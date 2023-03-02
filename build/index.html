@@ -29,7 +29,7 @@
             <ul class="nav__list list">
               <li class="nav__item">
                 <a class="nav__item--link link" href="mailto:info@sd.ru">
-                  <svg class="nav__item--icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="nav__item--icon" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./img/sprite.svg#icon-email"></use>
                   </svg>
                   <span class="nav__item--text">info@sd.ru</span>
@@ -37,7 +37,7 @@
               </li>
               <li class="nav__item">
                 <a class="nav__item--link link" href="tel:+74950005252">
-                  <svg class="nav__item--icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="nav__item--icon" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./img/sprite.svg#icon-phone-call"></use>
                   </svg>
                   <span class="nav__item--text">+7 (495) 000 52 52</span>
@@ -49,13 +49,94 @@
         </div>
       </header>
       <main class="main">
+        <h1 class="visually-hidden">Интернет-магазин 'Smart Device'</h1>
         <picture>
                 <source type="image/webp" srcset="../img/main-block-background.webp, ./img/main-block-background@2x.webp 2x">
                 <img src="./img/main-block-background.jpg" loading="lazy" srcset="./img/main-block-background@2x.jpg 2x" width="1920" height="880" alt="Фон главного блока Smart Device">
               </picture>
       </main>
       <footer class="footer">
-        <div class="container"></div>
+        <div class="container footer__container footer__accordion-nojs">
+          <section class="footer__social">
+            <h2 class="visually-hidden">Ссылки на соц.сети</h2>
+            <a class="footer__social--logo link" href="./index.html">
+              <img class="footer__social--img" src="./img/svg/logo-smart-device.svg" width="215" height="55" alt="Логотип интернет-магазина 'Smart Device'">
+            </a>
+            <ul class="footer__social--list list">
+              <li class="footer__social--item">
+                <a class="footer__social--link link" href="#">
+                  <svg class="footer__social--icon" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-ok"></use>
+                  </svg>
+                  <span class="visually-hidden">Ссылка на Одноклассники</span>
+                </a>
+              </li>
+              <li class="footer__social--item">
+                <a class="footer__social--link link" href="#">
+                  <svg class="footer__social--icon" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-vk"></use>
+                  </svg>
+                  <span class="visually-hidden">Ссылка на ВКонтакте</span>
+                </a>
+              </li>
+              <li class="footer__social--item">
+                <a class="footer__social--link link" href="#">
+                  <svg class="footer__social--icon" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-pinterest"></use>
+                  </svg>
+                  <span class="visually-hidden">Ссылка на Pinterest</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="footer__navigation footer__accordion" data-accordion>
+            <h2 class="footer__navigation--title footer__title" data-accordion-title>Разделы сайта</h2>
+            <nav class="footer__navigation--container footer__accordion--content" data-accordion-content>
+              <ul class="footer__navigation--list list">
+                <li class="footer__navigation--item">
+                  <a class="footer__navigation--link link" href="#">О Компании</a>
+                </li>
+                <li class="footer__navigation--item">
+                  <a class="footer__navigation--link link" href="#">Продукты</a>
+                </li>
+                <li class="footer__navigation--item">
+                  <a class="footer__navigation--link link" href="#">Производство печатных плат</a>
+                </li>
+                <li class="footer__navigation--item">
+                  <a class="footer__navigation--link link" href="#">Монтаж печатных плат</a>
+                </li>
+              </ul>
+              <ul class="footer__navigation--list list">
+                <li class="footer__navigation--item">
+                  <a class="footer__navigation--link link" href="#">Комплектующие</a>
+                </li>
+                <li class="footer__navigation--item">
+                  <a class="footer__navigation--link link" href="#">Доставка</a>
+                </li>
+                <li class="footer__navigation--item">
+                  <a class="footer__navigation--link link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+          <section class="footer__address footer__accordion" data-accordion>
+            <h2 class="footer__address--title footer__title" data-accordion-title>Наш офис</h2>
+            <div class="footer__accordion--content" data-accordion-content>
+              <p class="footer__address--text">г.&nbsp;Мытищи, Олимпийский проспект, д.10</p>
+              <ul class="footer__address--list list">
+                <li class="footer__address--item">
+                  <a class="footer__address--link link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+                </li>
+                <li class="footer__address--item">
+                  <a class="footer__address--link link" href="tel:+79253895829">+7 (925) 389-58-29</a>
+                </li>
+                <li class="footer__address--item">
+                  <a class="footer__address--link link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </footer>
     </div>
 

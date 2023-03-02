@@ -93,9 +93,6 @@
 }
 
 @media (max-width: $vp-767) {
-//   .logo__smartdevice {
-//     display: none;
-//   } не удаляется текст из svg
   .header__nav {
     transform: translate(0, 16px);
   }
