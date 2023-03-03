@@ -17,6 +17,18 @@
   }
 }
 
+.main {
+  margin-top: 102px;
+
+  @media (max-width: $vp-1023) {
+    margin-top: 85px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 60px;
+  }
+}
+
 .list {
   margin: 0;
   padding: 0;

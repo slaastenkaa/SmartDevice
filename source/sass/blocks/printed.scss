@@ -1,0 +1,142 @@
+.printed {
+  position: relative;
+  height: 778px;
+}
+
+.printed__picture img {
+  width: 100vw;
+  height: 778px;
+  position: absolute;
+  background-color: $black-pearl;
+}
+
+.printed__container {
+  position: relative;
+  padding-top: 142px;
+  padding-left: 164.5px;
+
+  h2 {
+    font-family: $ff-roboto-condensed;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $alice-blue-second;
+  }
+
+  p {
+    width: 60%;
+    margin-bottom: 18px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    color: $alice-blue-second;
+    transform: translate(0, -27px);
+  }
+}
+
+.printed__button {
+  display: block;
+  padding: 16px 26px 16.5px;
+  font-size: 18px;
+  line-height: 21px;
+  color: $alice-blue-second;
+  background: $deep-sky-blue;
+  border-radius: 3px;
+  border: 1px solid $deep-sky-blue;
+  transition: $trans-easeinout;
+}
+
+.printed__button:hover,
+.printed__button:focus {
+  background: $black-pearl;
+  border: 1px solid $alice-blue-second;
+}
+
+.printed__button:active {
+  background: $deep-sky-blue;
+  border: 1px solid $deep-sky-blue;
+  opacity: 0.8;
+  transform: $trans-scale3d;
+}
+
+.printed__button--span-inner {
+  display: none;
+}
+
+@media (max-width: $vp-1023) {
+  .printed {
+    height: 554px;
+  }
+
+  .printed__picture img {
+    height: 554px;
+  }
+
+  .printed__container {
+    margin-left: 0;
+    padding-top: 43px;
+  }
+
+  .printed__container h2 {
+    font-size: 65px;
+    line-height: 70px;
+    letter-spacing: 0.06em;
+  }
+
+  .printed__container p {
+    width: 100%;
+    margin-bottom: 4px;
+    transform: translate(0, -51px);
+  }
+
+  .printed__button {
+    margin-left: 45px;
+  }
+}
+
+@media (max-width: $vp-767) {
+  .printed {
+    height: 500px;
+  }
+
+  .printed__picture img {
+    height: 500px;
+  }
+
+  .printed__container {
+    padding-top: 60px;
+  }
+
+  .printed__container h2 {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.07em;
+  }
+
+  .printed__container p {
+    margin-bottom: 23px;
+    font-size: 14px;
+    line-height: 22px;
+    transform: translate(-2px, -22px);
+  }
+
+  .printed__button {
+    width: auto;
+    margin-left: 0;
+    padding: 11px 26px 11px;
+    font-size: 14px;
+    line-height: 16px;
+    transform: translate(-1px, 0);
+  }
+
+  .printed__button--span {
+    display: none;
+  }
+
+  .printed__button--span-inner {
+    display: block;
+  }
+}

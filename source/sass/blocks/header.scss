@@ -4,6 +4,7 @@
   min-height: 120px;
   width: 100%;
   background: $black-to-black-pearl;
+  z-index: 1;
 }
 
 @media (max-width: $vp-1023) {
