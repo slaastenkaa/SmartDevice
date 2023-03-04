@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px 31px;
+  margin-left: 2px;
 }
 
 .advantages__item {
@@ -15,6 +16,7 @@
   flex-wrap: wrap;
   min-height: 300px;
   padding: 41px 41px 34px;
+  border: 1px solid $whisper;
   border-left: 5px solid $deep-sky-blue;
   transition: $trans-easeinout;
 }
@@ -30,7 +32,7 @@
   transition: $trans-easeinout;
 }
 
-.detective__item svg {
+.advantages-detective__item svg {
   transform: translate(-5px, -1px);
 }
 
@@ -79,22 +81,24 @@
 @media (max-width: $vp-1023) {
   .advantages {
     padding-top: 80px;
+    padding-bottom: 30px;
   }
 
   .advantages__list {
     gap: 30px 28px;
+    margin-left: 0;
   }
 
   .advantages__item {
     min-height: 360px;
-    padding: 41px 41px 17px;
+    padding: 41px 41px 15px;
   }
 
-  .detective__item svg {
+  .advantages-detective__item svg {
     transform: translate(-1px, -1px);
   }
 
-  .tag__item svg {
+  .advantages-tag__item svg {
     transform: translate(2px, -1px);
   }
 
@@ -102,11 +106,11 @@
     margin: 16px 0 7px;
   }
 
-  .detective__item h3 {
+  .advantages-detective__item h3 {
     margin: 13px 0 6px;
   }
 
-  .tag__item h3 {
+  .advantages-tag__item h3 {
     margin: 10px 0 4px;
   }
 
@@ -116,16 +120,26 @@
     line-height: 21.6px;
     letter-spacing: 1.5px;
   }
+
+  .advantages-hired__item p {
+    letter-spacing: 1px;
+  }
+
+  .advantages-detective__item p {
+    letter-spacing: 0.7px;
+  }
 }
 
 @media (max-width: $vp-767) {
   .advantages {
     padding-top: 50px;
+    padding-bottom: 20px;
   }
 
   .advantages__list {
     display: flex;
     flex-direction: column;
+    margin-left: 0;
     transform: translate(-1.5px, 0);
   }
 
@@ -134,9 +148,18 @@
     padding: 30px 25px 15px;
   }
 
+  .advantages-detective__item,
+  .advantages-tag__item {
+    min-height: 325px;
+  }
+
   .advantages__item svg {
     width: 30px;
     height: 30px;
+  }
+
+  .advantages-detective__item svg {
+    transform: translate(0, 0);
   }
 
   .advantages__item h3 {
@@ -144,9 +167,21 @@
     font-size: 20px;
   }
 
+  .advantages-detective__item h3,
+  .advantages-tag__item h3 {
+    margin: 18px 0 10px;
+    line-height: 29px;
+  }
+
   .advantages__item p {
     margin: 3px 0 5px;
     font-size: 14px;
     line-height: 19px;
+    letter-spacing: 0.7px;
+  }
+
+  .advantages-stopwatch__item p,
+  .advantages-tag__item p {
+    letter-spacing: 1.5px;
   }
 }

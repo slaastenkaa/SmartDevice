@@ -46,7 +46,8 @@
 
 .nav__item--link:active,
 .nav__item--link:active .nav__item--link svg {
-  color: $light-shade-of-gray-opacity;
+  color: $blue-bolt;
+  opacity: 1;
   transform: none;
 }
 

@@ -108,7 +108,7 @@
 }
 
 .footer__navigation--link:active {
-  color: $color-default-white;
+  color: $blue-bolt;
   opacity: 1;
 }
 
@@ -138,7 +138,7 @@
 }
 
 .footer__address--link:active {
-  color: $color-default-white;
+  color: $blue-bolt;
 }
 
 @media (max-width: $vp-1023) {
@@ -238,11 +238,6 @@
     opacity: 0;
   }
 
-  .footer__accordion h2:hover::before,
-  .footer__accordion h2:hover::after {
-    transform: rotate3d(1, 1, 1, 360deg);
-  }
-
   .footer__accordion-nojs .footer__accordion h2::before,
   .footer__accordion-nojs .footer__accordion h2::after {
     display: none;
@@ -260,7 +255,6 @@
     opacity: 1;
   }
 
-
   .footer__accordion h2::after {
     content: "";
     position: absolute;
@@ -274,8 +268,12 @@
     opacity: 1;
   }
 
+  .footer__accordion h2:hover::before {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+
   .footer__accordion-open.footer__accordion h2::after {
-    display: none;
+    transform: rotate3d(1, 1, 1, 360deg);
   }
 
   .footer__accordion-nojs .footer__accordion--content,
