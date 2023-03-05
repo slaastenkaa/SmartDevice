@@ -8,7 +8,7 @@
   grid-template-columns: 0.26fr 1fr;
 }
 
-.about__picture {
+.about__image img {
   padding-top: 29px;
   transform: translate(1px, 0);
 }
@@ -98,7 +98,7 @@ p.about__content--text-mobil {
     grid-template-columns: 0.35fr 1fr;
   }
 
-  .about__picture {
+  .about__image img {
     padding-top: 35px;
     transform: translate(-4px, 0);
   }
@@ -130,7 +130,7 @@ p.about__content--text-mobil {
     flex-direction: column;
   }
 
-  .about__picture {
+  .about__image img {
     display: none;
   }
 

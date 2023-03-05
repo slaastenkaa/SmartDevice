@@ -1,28 +1,34 @@
 .nav {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  transform: translate(0, 30px);
+  padding: 30px 0 25px;
 }
 
-.nav__logo--picture img {
+.nav__logo {
+  transform: translate(1px, 0);
+}
+
+.nav__logo svg {
+  color: $alice-blue-second;
   transition: $trans-easeinout;
 }
 
-.nav__logo--picture img:hover,
-.nav__logo--picture img:focus {
+.nav__logo svg:hover,
+.nav__logo svg:focus {
+  color: $deep-sky-blue;
   opacity: 0.8;
   transform: $trans-scale3d;
 }
 
-.nav__logo--picture img:active {
+.nav__logo svg:active {
   opacity: 0.6;
   transform: none;
 }
 
 .nav__list {
   display: flex;
-  transform: translate(3.6vw, 15px);
-  gap: 6.25vw;
+  transform: translate(3.7vw, 15px);
+  gap: 6.3vw;
   flex-wrap: wrap;
 }
 
@@ -57,8 +63,8 @@
 
 .nav__button {
   margin-left: auto;
-  transform: translate(-63px, 5px);
-  padding: 9.5px 17px 13px 16px;
+  transform: translate(-61px, 5px);
+  padding: 9.5px 17px 13px 16.5px;
   color: $alice-blue-second;
   border: 1px solid $alice-blue-second;
   border-radius: 3px;
@@ -79,13 +85,17 @@
 @media (max-width: $vp-1023) {
   .header__nav {
     grid-template-columns: 1fr 2fr;
-    transform: translate(0, 20px);
+    padding: 20px 0 18px;
+  }
+
+  .nav__logo {
+    transform: translate(0, 0);
   }
 
   .nav__list {
     margin-left: auto;
-    transform: translate(-29px, 11px);
-    gap: 5.35vw;
+    transform: translate(-32px, 10px);
+    gap: 5.1vw;
   }
 
   .nav__item--text,
@@ -96,16 +106,17 @@
 
 @media (max-width: $vp-767) {
   .header__nav {
-    transform: translate(0, 16px);
+    padding: 15px 0 15px;
   }
 
-  .nav__logo--picture img {
-    width: 35px;
+  .nav__logo svg {
+    width: 135px;
     height: auto;
+    color: transparent;
   }
 
   .nav__list {
-    transform: translate(-20px, 4px);
-    gap: 11.4vw;
+    transform: translate(-20px, 5px);
+    gap: 11.8vw;
   }
 }

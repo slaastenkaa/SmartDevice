@@ -22,11 +22,10 @@
       <div class="container">
         <nav class="header__nav nav">
           <a class="nav__logo link" href="./index.html">
-            <picture class="nav__logo--picture">
-              <source media="(max-width: 767px)" srcset="./img/svg/logo-smart-device-mobil.svg">
-              <img src="./img/svg/logo-smart-device.svg" width="215" height="55"
-                alt="Логотип интернет-магазина 'Smart Device'">
-            </picture>
+            <svg width="215" height="55" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./img/sprite.svg#logo-smart-device"></use>
+            </svg>
+            <span class="visually-hidden">Логотип интернет-магазина 'Smart Device'</span>
           </a>
           <ul class="nav__list list">
             <li class="nav__item">
@@ -55,16 +54,12 @@
     <main class="main">
       <h1 class="visually-hidden">Интернет-магазин 'Smart Device'</h1>
       <section class="printed">
-        <picture class="printed__picture">
+        <picture>
           <source media="(max-width: 767px)" type="image/webp"
             srcset="./img/main-block-background-mobil.webp, ./img/main-block-background-mobil@2x.webp 2x">
           <source media="(max-width: 1023px)" type="image/webp"
             srcset="./img/main-block-background-tablet.webp, ./img/main-block-background-tablet@2x.webp 2x">
           <source type="image/webp" srcset="./img/main-block-background.webp, ./img/main-block-background@2x.webp 2x">
-          <source media="(max-width: 767px)"
-            srcset="./img/main-block-background-mobil.jpg, ./img/main-block-background-mobil@2x.jpg 2x">
-          <source media="(max-width: 1023px)"
-            srcset="./img/main-block-background-tablet.jpg, ./img/main-block-background-tablet@2x.jpg 2x">
           <img src="./img/main-block-background.jpg" loading="lazy" srcset="./img/main-block-background@2x.jpg 2x"
             width="1920" height="880" alt="Фон главного блока Smart Device">
         </picture>
@@ -121,14 +116,15 @@
       </section>
       <section class="about">
         <div class="container about__container">
-          <picture class="about__picture">
-            <source media="(max-width: 1023px)" type="image/webp"
-              srcset="./img/year-image-table.webp, ./img/year-image-table@2x.webp 2x">
-            <source type="image/webp" srcset="./img/year-image-table.webp, ./img/year-image-table@2x.webp 2x">
-            <source media="(max-width: 1023px)" srcset="./img/year-image-table.png, ./img/year-image-table@2x.png 2x">
-            <img src="./img/year-image-table.png" loading="lazy" srcset="./img/year-image-table@2x.png 2x" width="150"
-              height="320" alt="2022-й год.">
-          </picture>
+          <div class="about__image">
+            <picture>
+              <source media="(max-width: 1023px)" type="image/webp"
+                srcset="./img/year-image-table.webp, ./img/year-image-table@2x.webp 2x">
+              <source type="image/webp" srcset="./img/year-image-table.webp, ./img/year-image-table@2x.webp 2x">
+              <img src="./img/year-image-table.png" loading="lazy" srcset="./img/year-image-table@2x.png 2x" width="150"
+                height="320" alt="2022-й год.">
+            </picture>
+          </div>
           <div class="about__content about__content-nojs">
             <h2>О компании</h2>
             <div class="about__content--text">
@@ -154,7 +150,76 @@
           </div>
         </div>
       </section>
-      <section class="services"></section>
+      <section class="services">
+        <div class="container services__container">
+          <h2>Smart Device предлагает следующие товары и услуги</h2>
+          <ul class="services__list list">
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="./img/main-block-background-mobil.webp, ./img/main-block-background-mobil@2x.webp 2x">
+                  <source media="(max-width: 1023px)" type="image/webp"
+                    srcset="./img/main-block-background-tablet.webp, ./img/main-block-background-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/main-block-background.webp, ./img/main-block-background@2x.webp 2x">
+                  <img src="./img/main-block-background.jpg" loading="lazy"
+                    srcset="./img/main-block-background@2x.jpg 2x" width="1920" height="880"
+                    alt="Фон главного блока Smart Device">
+                </picture>
+                <h3>Производство печатных плат</h3>
+                <button class="services__button">
+                  <svg width="8" height="4" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="./img/main-block-background-mobil.webp, ./img/main-block-background-mobil@2x.webp 2x">
+                  <source media="(max-width: 1023px)" type="image/webp"
+                    srcset="./img/main-block-background-tablet.webp, ./img/main-block-background-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/main-block-background.webp, ./img/main-block-background@2x.webp 2x">
+                  <img src="./img/main-block-background.jpg" loading="lazy"
+                    srcset="./img/main-block-background@2x.jpg 2x" width="1920" height="880"
+                    alt="Фон главного блока Smart Device">
+                </picture>
+                <h3>Монтаж печатных плат</h3>
+                <button class="services__button">
+                  <svg width="8" height="4" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="./img/main-block-background-mobil.webp, ./img/main-block-background-mobil@2x.webp 2x">
+                  <source media="(max-width: 1023px)" type="image/webp"
+                    srcset="./img/main-block-background-tablet.webp, ./img/main-block-background-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/main-block-background.webp, ./img/main-block-background@2x.webp 2x">
+                  <img src="./img/main-block-background.jpg" loading="lazy"
+                    srcset="./img/main-block-background@2x.jpg 2x" width="1920" height="880"
+                    alt="Фон главного блока Smart Device">
+                </picture>
+                <h3>Комплектующие для светотехники</h3>
+                <button class="services__button">
+                  <svg width="8" height="4" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section class="form" id="form"></section>
     </main>
     <footer class="footer">
@@ -162,8 +227,10 @@
         <section class="footer__social">
           <h2 class="visually-hidden">Ссылки на соц.сети.</h2>
           <a class="footer__social--logo link" href="./index.html">
-            <img src="./img/svg/logo-smart-device.svg" width="215" height="55"
-              alt="Логотип интернет-магазина 'Smart Device'">
+            <svg width="215" height="55" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./img/sprite.svg#logo-smart-device"></use>
+            </svg>
+            <span class="visually-hidden">Логотип интернет-магазина 'Smart Device'</span>
           </a>
           <ul class="footer__social--list list">
             <li class="footer__social--item">

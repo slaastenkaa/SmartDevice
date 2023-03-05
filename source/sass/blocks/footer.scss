@@ -22,17 +22,19 @@
   transform: translate(4px, 5px);
 }
 
-.footer__social--logo img {
+.footer__social--logo svg {
+  color: $alice-blue-second;
   transition: $trans-easeinout;
 }
 
-.footer__social--logo img:hover,
-.footer__social--logo img:focus {
+.footer__social--logo svg:hover,
+.footer__social--logo svg:focus {
+  color: $deep-sky-blue;
   opacity: 0.8;
   transform: $trans-scale3d;
 }
 
-.footer__social--logo img:active {
+.footer__social--logo svg:active {
   opacity: 0.6;
   transform: none;
 }
