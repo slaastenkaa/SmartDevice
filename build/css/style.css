@@ -1145,6 +1145,10 @@ p.about__content--text-mobil {
   color: #ffffff;
 }
 
+.services__container h4 {
+  display: none;
+}
+
 .services__list {
   display: -ms-grid;
   display: grid;
@@ -1156,7 +1160,7 @@ p.about__content--text-mobil {
 .services__link {
   position: relative;
   display: block;
-  min-height: 650px;
+  height: 650px;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1168,35 +1172,9 @@ p.about__content--text-mobil {
   box-shadow: 0 3px 10px #00b2ff;
 }
 
-.services__link:hover .services__link--image,
-.services__link:focus .services__link--image {
-  mix-blend-mode: plus-lighter;
-}
-
-.services__link:hover h3,
-.services__link:focus h3 {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-.services__link:hover .services__button,
-.services__link:focus .services__button {
-  background: #041827;
-  border: 1px solid #f2f5f7;
-}
-
 .services__link:active {
   -webkit-box-shadow: 0 1px 4px #00b2ff;
   box-shadow: 0 1px 4px #00b2ff;
-}
-
-.services__link:active .services__button {
-  background: #00b2ff;
-  border: 1px solid #00b2ff;
-  opacity: 0.8;
-  -webkit-transform: scale3d(1.02, 1.02, 1.02);
-  transform: scale3d(1.02, 1.02, 1.02);
 }
 
 .services__link--image {
@@ -1207,8 +1185,13 @@ p.about__content--text-mobil {
   transition: all 0.5s ease-in-out;
 }
 
+.services__link:hover .services__link--image,
+.services__link:focus .services__link--image {
+  mix-blend-mode: plus-lighter;
+}
+
 .services__link--image img {
-  min-height: 650px;
+  height: 650px;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: right bottom;
@@ -1228,6 +1211,13 @@ p.about__content--text-mobil {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.services__link:hover h3,
+.services__link:focus h3 {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .services__button {
@@ -1251,6 +1241,20 @@ p.about__content--text-mobil {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.services__link:hover .services__button,
+.services__link:focus .services__button {
+  background: #041827;
+  border: 1px solid #f2f5f7;
+}
+
+.services__link:active .services__button {
+  background: #00b2ff;
+  border: 1px solid #00b2ff;
+  opacity: 0.8;
+  -webkit-transform: scale3d(1.02, 1.02, 1.02);
+  transform: scale3d(1.02, 1.02, 1.02);
 }
 
 .footer {
@@ -2295,6 +2299,39 @@ p.about__content--text-mobil {
     transform: translate(0, -25px);
   }
 
+  .services {
+    padding-top: 26px;
+    padding-bottom: 74px;
+  }
+
+  .services__container h2 {
+    margin-bottom: 17px;
+  }
+
+  .services__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .services__link {
+    height: 251px;
+  }
+
+  .services__link--image img {
+    height: 251px;
+  }
+
+  .services__link h3 {
+    width: 35.5%;
+    padding: 38px 45px;
+  }
+
   .footer {
     padding-bottom: 62px;
   }
@@ -2528,6 +2565,43 @@ p.about__content--text-mobil {
     -webkit-transform: translate(-1px, -5px);
     -ms-transform: translate(-1px, -5px);
     transform: translate(-1px, -5px);
+  }
+
+  .services {
+    padding-top: 20px;
+    padding-bottom: 84px;
+  }
+
+  .services__container h2 {
+    display: none;
+  }
+
+  .services__container h4 {
+    display: block;
+    margin-bottom: 28px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+    color: #ffffff;
+  }
+
+  .services__list {
+    gap: 29px;
+  }
+
+  .services__link h3 {
+    width: 71%;
+    margin-top: 0;
+    padding: 26px 28px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .services__button {
+    bottom: 1px;
+    width: 40px;
+    height: 40px;
   }
 
   .footer {
