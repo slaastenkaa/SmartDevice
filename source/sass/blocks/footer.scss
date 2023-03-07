@@ -53,13 +53,12 @@
 
 .footer__social--link svg:hover,
 .footer__social--link svg:focus {
-  opacity: 0.8;
+  color: $deep-sky-blue;
   transform: $trans-scale3d;
 }
 
 .footer__social--link svg:active {
-  color: $blue-bolt;
-  opacity: 1;
+  opacity: 0.8;
   transform: none;
 }
 
@@ -105,13 +104,13 @@
 .footer__navigation--link:hover,
 .footer__navigation--link:focus {
   font-size: 16.2px;
-  color: $color-default-white;
-  opacity: 0.8;
+  color: $blue-bolt;
+  opacity: 1;
 }
 
 .footer__navigation--link:active {
-  color: $blue-bolt;
-  opacity: 1;
+  opacity: 0.8;
+  transform: none;
 }
 
 .footer__accordion--content p {
@@ -136,11 +135,12 @@
 .footer__address--link:hover,
 .footer__address--link:focus {
   font-size: 16.2px;
-  opacity: 0.8;
+  color: $blue-bolt;
 }
 
 .footer__address--link:active {
-  color: $blue-bolt;
+  opacity: 0.8;
+  transform: none;
 }
 
 @media (max-width: $vp-1023) {
@@ -150,7 +150,7 @@
 
   .footer__container {
     grid-template-columns: 1fr 1.5fr;
-    gap: 30px 18vw;
+    gap: 21px 17.5vw;
   }
 
   .footer__social {
@@ -164,6 +164,10 @@
 
   .footer__social--list {
     transform: translate(0, 10px);
+  }
+
+  .footer__navigation--link {
+    line-height: 22px;
   }
 
   .footer__navigation {
@@ -281,7 +285,7 @@
   .footer__accordion-nojs .footer__accordion--content,
   .footer__accordion-open .footer__accordion--content {
     display: block;
-    padding: 0 26px 12px;
+    padding: 0 25px 12px;
     transform: translate(0, -5px);
     transition: $trans-easeinout;
   }

@@ -68,7 +68,6 @@
   font-size: 16px;
   color: $black-pearl;
   line-height: 21.8px;
-  letter-spacing: 1.35px;
   transition: $trans-easeinout;
 }
 
@@ -118,15 +117,6 @@
     margin: 0 0 16px;
     font-size: 16px;
     line-height: 21.6px;
-    letter-spacing: 1.5px;
-  }
-
-  .advantages-hired__item p {
-    letter-spacing: 1px;
-  }
-
-  .advantages-detective__item p {
-    letter-spacing: 0.7px;
   }
 }
 
@@ -177,11 +167,9 @@
     margin: 3px 0 5px;
     font-size: 14px;
     line-height: 19px;
-    letter-spacing: 0.7px;
   }
 
-  .advantages-stopwatch__item p,
   .advantages-tag__item p {
-    letter-spacing: 1.5px;
+    letter-spacing: 0.16px;
   }
 }

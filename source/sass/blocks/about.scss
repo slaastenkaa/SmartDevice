@@ -35,7 +35,6 @@
   font-weight: 400;
   font-size: $fz-default;
   line-height: 21px;
-  letter-spacing: 1.09px;
   color: $black-pearl;
   transform: translate(-1px, 0);
 }
@@ -91,7 +90,7 @@ p.about__content--text-mobil {
 @media (max-width: $vp-1023) {
   .about {
     padding-top: 15px;
-    padding-bottom: 54px;
+    padding-bottom: 55px;
   }
 
   .about__container {
@@ -104,8 +103,8 @@ p.about__content--text-mobil {
   }
 
   .about__content--text p {
-    margin-bottom: 24px;
-    letter-spacing: 1px;
+    margin-bottom: 20px;
+    line-height: 22px;
     transform: translate(0, 0);
   }
 
@@ -143,7 +142,6 @@ p.about__content--text-mobil {
     margin-bottom: 18px;
     font-size: 14px;
     line-height: 19px;
-    letter-spacing: 1.1px;
   }
 
   .about__content--text-mobil {

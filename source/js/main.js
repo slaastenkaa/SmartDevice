@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initAccordion} from './modules/accordion/accordion';
 import {initScroll} from './modules/scroll/scroll';
 import {initTab} from './modules/tab/tab';
+import {initPhoneMask} from './modules/mask-phone/phone-mask';
 
 // ---------------------------------
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initScroll();
   initTab();
+  initPhoneMask();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

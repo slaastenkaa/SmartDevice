@@ -31,7 +31,7 @@ $blue-bolt:                         #00b3ff;
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 $black-to-black-pearl:              linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-$black-to-deep-sky-blue:            linear-gradient(139deg, rgba(0, 103, 147, 1) 0%, rgba(0, 103, 147, 1) 33%, rgba(0, 179, 255, 1) 33%, rgba(0, 179, 255, 1) 100%);
+$black-to-deep-sky-blue:            linear-gradient(139deg, #026693 33.6%, #00b2ff 33%);
 
 // Typography
 // ---------------------------------
@@ -45,9 +45,8 @@ $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
-$ff-pt-mono-head:                   "PT Mono", "Courier New", monospace;
-$ff-pt-mono:                        "PT Mono", "Arial", sans-serif;
-$ff-roboto-condensed:               "Roboto Condensed", "Arial", sans-serif;
+$ff-pt-mono:                        "PT Mono", "Courier New", monospace; //"PT Mono", "Arial", sans-serif;
+$ff-roboto-condensed:               "Roboto Condensed", "Verdana", sans-serif; //"Roboto Condensed", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
