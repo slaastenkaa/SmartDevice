@@ -191,6 +191,7 @@
 .modal__form input:hover,
 .modal__form textarea:hover,
 .modal__form input:focus,
+.modal__form input:focus-within,
 .modal__form textarea:focus {
   color: $black-pearl-second;
   background: $deep-sky-blue;

@@ -28,7 +28,7 @@
 
 .nav__list {
   display: flex;
-  transform: translate(3.4vw, 15px);
+  transform: translate(3.4vw, 0);
   gap: 1vw 6.3vw;
   flex-wrap: wrap;
 }
@@ -37,6 +37,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  padding: 15px 0;
   font-family: $ff-pt-mono;
   font-weight: 400;
   font-size: $fz-default;
@@ -100,13 +101,18 @@
 
   .nav__list {
     margin-left: auto;
-    transform: translate(-32px, 10px);
-    gap: 5.1vw;
+    transform: translate(-16px, 0);
+    gap: 1.2vw;
   }
 
   .nav__item-text,
   .nav__button {
     display: none;
+  }
+
+  .nav__item-link {
+    padding: 10px 15px;
+    gap: 0;
   }
 }
 
@@ -122,7 +128,7 @@
   }
 
   .nav__list {
-    transform: translate(-20px, 5px);
-    gap: 11.8vw;
+    transform: translate(-5px, -5px);
+    gap: 1vw 3vw;
   }
 }
