@@ -62,7 +62,7 @@
   transform: $trans-scale3d;
 }
 
-.printed__button--span-inner {
+.printed__button-span-inner {
   display: none;
 }
 
@@ -132,11 +132,11 @@
     transform: translate(-1px, 0);
   }
 
-  .printed__button--span {
+  .printed__button-span {
     display: none;
   }
 
-  .printed__button--span-inner {
+  .printed__button-span-inner {
     display: block;
   }
 }

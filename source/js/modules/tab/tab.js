@@ -7,11 +7,11 @@ export function initTab() {
 
   tabMoreButtons.forEach((item) => {
     item.addEventListener('click', () => {
-      if (tabMoreText.classList.contains('about__content--text-hidden')) {
-        tabMoreText.classList.remove('about__content--text-hidden');
+      if (tabMoreText.classList.contains('about__content-text-hidden')) {
+        tabMoreText.classList.remove('about__content-text-hidden');
         item.textContent = 'Свернуть';
       } else {
-        tabMoreText.classList.add('about__content--text-hidden');
+        tabMoreText.classList.add('about__content-text-hidden');
         item.textContent = 'Подробнее';
       }
     });

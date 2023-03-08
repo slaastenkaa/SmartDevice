@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   padding: 30px 0 25px;
+  gap: 10px;
 }
 
 .nav__logo {
@@ -27,12 +28,12 @@
 
 .nav__list {
   display: flex;
-  transform: translate(3.7vw, 15px);
-  gap: 6.3vw;
+  transform: translate(3.4vw, 15px);
+  gap: 1vw 6.3vw;
   flex-wrap: wrap;
 }
 
-.nav__item--link {
+.nav__item-link {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -44,25 +45,25 @@
   transition: $trans-easeinout;
 }
 
-.nav__item--link:hover,
-.nav__item--link:focus {
+.nav__item-link:hover,
+.nav__item-link:focus {
   opacity: 0.8;
   transform: $trans-scale3d;
 }
 
-.nav__item--link:hover svg,
-.nav__item--link:focus svg {
+.nav__item-link:hover svg,
+.nav__item-link:focus svg {
   color: $alice-blue-second;
 }
 
-.nav__item--link:active,
-.nav__item--link:active svg {
+.nav__item-link:active,
+.nav__item-link:active svg {
   color: $blue-bolt;
   opacity: 1;
   transform: none;
 }
 
-.nav__item--link svg {
+.nav__item-link svg {
   color: $deep-sky-blue;
 }
 
@@ -103,7 +104,7 @@
     gap: 5.1vw;
   }
 
-  .nav__item--text,
+  .nav__item-text,
   .nav__button {
     display: none;
   }
