@@ -48,7 +48,7 @@
               </a>
             </li>
           </ul>
-          <a class="nav__button button" type="button" data-open-modal="feedback" href="#">Заказать звонок</a>
+          <a class="nav__button button" data-open-modal="feedback" href="#">Заказать звонок</a>
         </nav>
       </div>
     </header>
@@ -348,13 +348,13 @@
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
+      <div class="modal__content form">
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
           <svg width="15" height="15">
             <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
-        <div class="modal__form" data-form-validate>
+        <div class="form__feedback--modal form__feedback" data-form-validate>
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form action="https://echo.htmlacademy.ru/" method="post">
@@ -368,18 +368,18 @@
               <span class="visually-hidden">Телефон:</span>
               <input id="phone-modal" type="tel" name="phone" placeholder="Телефон" required>
             </label>
-            <div class="modal__form-textarea">
+            <div class="form__feedback-textarea">
               <label for="text-modal">
                 <span class="visually-hidden">Ваш вопрос:</span>
                 <textarea id="text-modal" name="text" rows="5" placeholder="Ваш вопрос"></textarea>
               </label>
             </div>
-            <button class="modal__form-button button" type="submit">Отправить</button>
-            <div class="modal__form-checkbox">
+            <button class="form__feedback-button--modal form__feedback-button button" type="submit">Отправить</button>
+            <div class="form__feedback-checkbox--modal form__feedback-checkbox ">
               <label for="checkbox-modal" data-required data-validate-type="checkbox">
                 <input class="visually-hidden" id="checkbox-modal" type="checkbox" name="type"
                   value="Я согласен на обработку персональных данных" required checked="">
-                <span class="modal__form-checkbox-span">Я согласен на обработку персональных данных</span>
+                <span class="form__feedback-checkbox-span--modal form__feedback-checkbox-span">Я согласен на обработку персональных данных</span>
               </label>
             </div>
           </form>

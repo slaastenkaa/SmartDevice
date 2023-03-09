@@ -42,8 +42,8 @@
 .footer__social-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px 10px;
-  transform: translate(15px, 0);
+  gap: 10px 25px;
+  transform: translate(16px, 0);
 }
 
 .footer__social-link svg {
@@ -63,7 +63,7 @@
 }
 
 .footer__navigation {
-  transform: translate(2.7vw, 0);
+  transform: translate(2.75vw, 0);
 }
 
 .footer__navigation h2,
@@ -221,7 +221,7 @@
   .footer__address h2 {
     position: relative;
     margin-bottom: 13px;
-    padding: 8px 25px 6px;
+    padding: 9px 25px 7px;
     transition: $trans-easeinout;
     user-select: none;
     cursor: pointer;
@@ -287,8 +287,8 @@
   .footer__accordion-nojs .footer__accordion-content,
   .footer__accordion-open .footer__accordion-content {
     display: block;
-    padding: 0 25px 12px;
-    transform: translate(0, -5px);
+    padding: 0 25px 9px;
+    transform: translate(0, -7px);
     transition: $trans-easeinout;
   }
 

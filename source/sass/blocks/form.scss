@@ -1,6 +1,6 @@
 .form {
-  padding-top: 135px;
-  padding-bottom: 255px;
+  padding-top: 136px;
+  padding-bottom: 256px;
   background: $black-to-deep-sky-blue;
 }
 
@@ -106,7 +106,7 @@
   background: $black-pearl-second;
   border-radius: 3px;
   border: 1px solid $black-pearl-second;
-  transform: translate(-2px, 6px);
+  transform: translate(0, 7px);
   transition: $trans-easeinout;
 }
 
@@ -256,8 +256,8 @@
 
 @media (max-width: $vp-767) {
   .form {
-    padding-top: 23px;
-    padding-bottom: 96px;
+    padding-top: 22px;
+    padding-bottom: 97px;
   }
 
   .form__container {

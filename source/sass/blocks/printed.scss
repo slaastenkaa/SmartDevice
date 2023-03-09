@@ -1,13 +1,15 @@
 .printed {
   position: relative;
   height: 778px;
+  background-color: $black-pearl;
 }
 
 .printed img {
+  position: absolute;
+  min-width: 320px;
   width: 100vw;
   height: 778px;
-  position: absolute;
-  background-color: $black-pearl;
+  object-fit: cover;
 }
 
 .printed__container {
@@ -39,7 +41,7 @@
 
 .printed__button {
   display: block;
-  padding: 16px 26px 16.5px;
+  padding: 16px 26px 16px;
   font-size: 18px;
   line-height: 21px;
   color: $alice-blue-second;
