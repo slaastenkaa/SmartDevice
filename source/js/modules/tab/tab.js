@@ -3,9 +3,8 @@ export function initTab() {
   const tabMoreButtons = document.querySelectorAll('[data-tabmore-button]');
   const tabMoreText = document.querySelector('[data-tabmore-text]');
 
-  aboutContent.classList.remove('about__content-nojs');
-
   tabMoreButtons.forEach((item) => {
+    aboutContent.classList.remove('about__content-nojs');
     item.addEventListener('click', () => {
       if (tabMoreText.classList.contains('about__content-text-hidden')) {
         tabMoreText.classList.remove('about__content-text-hidden');
