@@ -421,6 +421,7 @@ body {
   padding: 0;
   min-height: 100vh;
   min-width: 320px;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -577,6 +578,14 @@ button,
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.wrapper ::-moz-selection {
+  background-color: #2c39f2;
+}
+
+.wrapper ::selection {
+  background-color: #2c39f2;
 }
 
 .main {
@@ -907,7 +916,7 @@ button,
 
 .printed__button {
   display: block;
-  padding: 16px 26px 16px;
+  padding: 14px 26px 18px;
   font-size: 18px;
   line-height: 21px;
   color: #f2f5f7;
@@ -948,7 +957,7 @@ button,
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 30px 31px;
-  margin-left: -1px;
+  margin-left: 1px;
 }
 
 .advantages__item {
@@ -1347,6 +1356,7 @@ p.about__content-text-mobil {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  caret-color: #2c39f2;
 }
 
 .form__feedback input {
@@ -1816,7 +1826,7 @@ p.about__content-text-mobil {
 .modal__content {
   position: relative;
   width: 500px;
-  padding: 37px 40px 40px;
+  padding: 37px 40px 42px;
   background: #00b3ff;
 }
 
@@ -1875,7 +1885,7 @@ p.about__content-text-mobil {
 .form__feedback--modal p {
   width: 95%;
   margin-top: 5px;
-  margin-bottom: 36px;
+  margin-bottom: 37px;
   font-family: "PTMono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
@@ -1903,10 +1913,10 @@ p.about__content-text-mobil {
 
 .form__feedback-button--modal {
   width: auto;
-  padding: 14px 69px 10px;
-  -webkit-transform: translate(-1px, -2px);
-  -ms-transform: translate(-1px, -2px);
-  transform: translate(-1px, -2px);
+  padding: 14px 15px 11px;
+  -webkit-transform: translate(0, -2px);
+  -ms-transform: translate(0, -2px);
+  transform: translate(0, -2px);
 }
 
 .form__feedback-button--modal:active {
@@ -2519,7 +2529,7 @@ p.about__content-text-mobil {
 
 @media (max-width: 1023px) {
   .main {
-    margin-top: 85px;
+    margin-top: -15px;
   }
 
   .container {
@@ -2527,6 +2537,7 @@ p.about__content-text-mobil {
   }
 
   .header {
+    position: relative;
     min-height: 100px;
   }
 
@@ -2589,6 +2600,7 @@ p.about__content-text-mobil {
 
   .printed__button {
     margin-left: 45px;
+    padding: 15px 26px 17px;
   }
 
   .advantages {
@@ -2838,7 +2850,7 @@ p.about__content-text-mobil {
 
 @media (max-width: 767px) {
   .main {
-    margin-top: 60px;
+    margin-top: -12px;
   }
 
   .container {
@@ -3103,17 +3115,18 @@ p.about__content-text-mobil {
   }
 
   .form__feedback-button {
-    padding: 14px 70.5px 9px;
-    -webkit-transform: translate(0.5px, 3px);
-    -ms-transform: translate(0.5px, 3px);
-    transform: translate(0.5px, 3px);
+    width: auto;
+    padding: 14px 15px 9px;
+    -webkit-transform: translate(0, 4px);
+    -ms-transform: translate(0, 4px);
+    transform: translate(0, 4px);
   }
 
   .form__feedback-checkbox {
     width: 90%;
-    -webkit-transform: translate(30px, 8px);
-    -ms-transform: translate(30px, 8px);
-    transform: translate(30px, 8px);
+    -webkit-transform: translate(30px, 10px);
+    -ms-transform: translate(30px, 10px);
+    transform: translate(30px, 10px);
   }
 
   .form__feedback-checkbox-span::before {

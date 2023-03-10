@@ -15,17 +15,21 @@
   main {
     flex-grow: 1;
   }
+
+  ::selection {
+    background-color: $color-neon-blue;
+  }
 }
 
 .main {
   margin-top: 102px;
 
   @media (max-width: $vp-1023) {
-    margin-top: 85px;
+    margin-top: -15px;
   }
 
   @media (max-width: $vp-767) {
-    margin-top: 60px;
+    margin-top: -12px;
   }
 }
 

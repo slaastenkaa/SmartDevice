@@ -65,6 +65,7 @@
   border-radius: 3px;
   outline: none;
   transition: $trans-easeinout;
+  caret-color: $color-neon-blue;
 }
 
 .form__feedback input {
@@ -293,13 +294,14 @@
   }
 
   .form__feedback-button {
-    padding: 14px 70.5px 9px;
-    transform: translate(0.5px, 3px);
+    width: auto;
+    padding: 14px 15px 9px;
+    transform: translate(0, 4px);
   }
 
   .form__feedback-checkbox {
     width: 90%;
-    transform: translate(30px, 8px);
+    transform: translate(30px, 10px);
   }
 
   .form__feedback-checkbox-span::before {
