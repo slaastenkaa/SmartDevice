@@ -42,8 +42,31 @@
   transform: translate(5px, 0);
 }
 
-.form__feedback span {
-  padding: 10px 0;
+.form__feedback label {
+  position: relative;
+}
+
+.form__feedback-span {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-family: $ff-pt-mono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  transition: $trans-easeinout;
+  transition-property: all;
+}
+
+.form__feedback-textarea .form__feedback-span {
+  top: -119px;
+  left: 15px;
+}
+
+.form__feedback .is-invalid {
+  position: relative;
   font-family: $ff-pt-mono;
   font-style: normal;
   font-weight: 700;
@@ -64,7 +87,6 @@
   border: none;
   border-radius: 3px;
   outline: none;
-  transition: $trans-easeinout;
   caret-color: $color-neon-blue;
 }
 
@@ -77,12 +99,13 @@
 }
 
 .form__feedback-textarea textarea {
+  position: relative;
   padding: 23px 15px;
 }
 
 .form__feedback input::placeholder,
 .form__feedback textarea::placeholder {
-  color: $color-default-white;
+  color: $color-transparent;
 }
 
 .form__feedback input:hover,
@@ -92,6 +115,20 @@
   color: $black-pearl-second;
   background: $deep-sky-blue;
   box-shadow: 0 3px 10px $black-pearl-second;
+}
+
+.form__feedback input:focus + .form__feedback-span,
+.form__feedback input:focus-within + .form__feedback-span {
+  top: -1px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.form__feedback textarea:focus + .form__feedback-span,
+.form__feedback textarea:focus-within + .form__feedback-span {
+  top: -144px;
+  font-size: 10px;
+  opacity: 0.7;
 }
 
 .form__feedback-button {
@@ -125,14 +162,14 @@
 }
 
 .form__feedback-checkbox {
-  transform: translate(35px, 20px);
+  transform: translate(35px, 22px);
 }
 
 .form__feedback-checkbox label {
   display: block;
 }
 
-.form__feedback .form__feedback-checkbox-span {
+.form__feedback-checkbox-span {
   position: relative;
   display: block;
   padding: 0;
@@ -148,6 +185,7 @@
 
 .form__feedback-checkbox-span:hover,
 .form__feedback-checkbox-span:focus {
+  font-size: 14px;
   font-weight: 700;
   color: $black-pearl-second;
   transform: $trans-scale3d;
@@ -235,9 +273,17 @@
     padding: 12px 15px 16px;
   }
 
+  .form__feedback-span {
+    top: 14px;
+  }
+
   .form__feedback-textarea textarea {
     padding: 30px 15px;
     height: 154px;
+  }
+
+  .form__feedback-textarea .form__feedback-span {
+    top: -111px;
   }
 
   .form__feedback-button {
@@ -291,6 +337,10 @@
   .form__feedback-textarea textarea {
     padding: 24px 15px;
     min-height: 180px;
+  }
+
+  .form__feedback-textarea .form__feedback-span {
+    top: -142px;
   }
 
   .form__feedback-button {

@@ -1331,8 +1331,35 @@ p.about__content-text-mobil {
   transform: translate(5px, 0);
 }
 
-.form__feedback span {
-  padding: 10px 0;
+.form__feedback label {
+  position: relative;
+}
+
+.form__feedback-span {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-family: "PTMono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+}
+
+.form__feedback-textarea .form__feedback-span {
+  top: -119px;
+  left: 15px;
+}
+
+.form__feedback .is-invalid {
+  position: relative;
   font-family: "PTMono", "Courier New", monospace;
   font-style: normal;
   font-weight: 700;
@@ -1353,9 +1380,6 @@ p.about__content-text-mobil {
   border: none;
   border-radius: 3px;
   outline: none;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   caret-color: #2c39f2;
 }
 
@@ -1368,32 +1392,33 @@ p.about__content-text-mobil {
 }
 
 .form__feedback-textarea textarea {
+  position: relative;
   padding: 23px 15px;
 }
 
 .form__feedback input::-webkit-input-placeholder,
 .form__feedback textarea::-webkit-input-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0);
 }
 
 .form__feedback input::-moz-placeholder,
 .form__feedback textarea::-moz-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0);
 }
 
 .form__feedback input:-ms-input-placeholder,
 .form__feedback textarea:-ms-input-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0);
 }
 
 .form__feedback input::-ms-input-placeholder,
 .form__feedback textarea::-ms-input-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0);
 }
 
 .form__feedback input::placeholder,
 .form__feedback textarea::placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0);
 }
 
 .form__feedback input:hover,
@@ -1404,6 +1429,20 @@ p.about__content-text-mobil {
   background: #00b2ff;
   -webkit-box-shadow: 0 3px 10px #041427;
   box-shadow: 0 3px 10px #041427;
+}
+
+.form__feedback input:focus + .form__feedback-span,
+.form__feedback input:focus-within + .form__feedback-span {
+  top: -1px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.form__feedback textarea:focus + .form__feedback-span,
+.form__feedback textarea:focus-within + .form__feedback-span {
+  top: -144px;
+  font-size: 10px;
+  opacity: 0.7;
 }
 
 .form__feedback-button {
@@ -1443,16 +1482,16 @@ p.about__content-text-mobil {
 }
 
 .form__feedback-checkbox {
-  -webkit-transform: translate(35px, 20px);
-  -ms-transform: translate(35px, 20px);
-  transform: translate(35px, 20px);
+  -webkit-transform: translate(35px, 22px);
+  -ms-transform: translate(35px, 22px);
+  transform: translate(35px, 22px);
 }
 
 .form__feedback-checkbox label {
   display: block;
 }
 
-.form__feedback .form__feedback-checkbox-span {
+.form__feedback-checkbox-span {
   position: relative;
   display: block;
   padding: 0;
@@ -1470,6 +1509,7 @@ p.about__content-text-mobil {
 
 .form__feedback-checkbox-span:hover,
 .form__feedback-checkbox-span:focus {
+  font-size: 14px;
   font-weight: 700;
   color: #041427;
   -webkit-transform: scale3d(1.02, 1.02, 1.02);
@@ -1925,9 +1965,9 @@ p.about__content-text-mobil {
 }
 
 .form__feedback-checkbox--modal {
-  -webkit-transform: translate(33px, -2px);
-  -ms-transform: translate(33px, -2px);
-  transform: translate(33px, -2px);
+  -webkit-transform: translate(34px, -3px);
+  -ms-transform: translate(34px, -3px);
+  transform: translate(34px, -3px);
 }
 
 .form__feedback-checkbox-span--modal::before,
@@ -2769,9 +2809,17 @@ p.about__content-text-mobil {
     padding: 12px 15px 16px;
   }
 
+  .form__feedback-span {
+    top: 14px;
+  }
+
   .form__feedback-textarea textarea {
     padding: 30px 15px;
     height: 154px;
+  }
+
+  .form__feedback-textarea .form__feedback-span {
+    top: -111px;
   }
 
   .form__feedback-button {
@@ -3112,6 +3160,10 @@ p.about__content-text-mobil {
   .form__feedback-textarea textarea {
     padding: 24px 15px;
     min-height: 180px;
+  }
+
+  .form__feedback-textarea .form__feedback-span {
+    top: -142px;
   }
 
   .form__feedback-button {
