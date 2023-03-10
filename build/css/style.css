@@ -1202,7 +1202,7 @@ p.about__content-text-mobil {
   mix-blend-mode: plus-lighter;
 }
 
-.services__link--image img {
+.services__link-image img {
   height: 650px;
   -o-object-fit: cover;
   object-fit: cover;
