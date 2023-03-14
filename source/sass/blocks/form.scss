@@ -44,6 +44,7 @@
 
 .form__feedback label {
   position: relative;
+  color: $color-default-white;
 }
 
 .form__feedback-span {
@@ -117,18 +118,15 @@
   box-shadow: 0 3px 10px $black-pearl-second;
 }
 
+.form__feedback input:not(:placeholder-shown) + .form__feedback-span,
 .form__feedback input:focus + .form__feedback-span,
-.form__feedback input:focus-within + .form__feedback-span {
-  top: -1px;
-  font-size: 10px;
-  opacity: 0.7;
-}
-
+.form__feedback input:focus-within + .form__feedback-span,
+.form__feedback textarea:not(:placeholder-shown) + .form__feedback-span,
 .form__feedback textarea:focus + .form__feedback-span,
 .form__feedback textarea:focus-within + .form__feedback-span {
-  top: -144px;
   font-size: 10px;
   opacity: 0.7;
+  transform: translate(0, -15px);
 }
 
 .form__feedback-button {
@@ -162,15 +160,17 @@
 }
 
 .form__feedback-checkbox {
-  transform: translate(35px, 22px);
+  position: relative;
+  transform: translate(9px, 22px);
+  order: 1;
 }
 
 .form__feedback-checkbox label {
-  display: block;
+  display: flex;
+  gap: 11px;
 }
 
 .form__feedback-checkbox-span {
-  position: relative;
   display: block;
   padding: 0;
   font-family: $ff-pt-mono;
@@ -195,37 +195,40 @@
   color: $black-pearl-second;
 }
 
-.form__feedback-checkbox-span::before,
-.form__feedback-checkbox-span::after {
-  content: "";
-  position: absolute;
-  top: 7.5px;
-  left: -25px;
-  width: 15px;
-  height: 15px;
+.form__feedback-checkbox input {
+  position: relative;
+  display: block;
+  margin-top: 6px;
+  width: 21px;
+  height: 16px;
+  padding: 0;
+  background: $color-transparent;
   border: 1px solid $color-default-white;
   border-radius: 2px;
   transition: $trans-easeinout;
+  appearance: none;
 }
 
-.form__feedback-checkbox-span:hover::before,
-.form__feedback-checkbox-span:hover::after,
-.form__feedback-checkbox-span:focus::before,
-.form__feedback-checkbox-span:focus::after {
-  border-color: $black-pearl-second;
-}
-
-.form__feedback-checkbox-span::after {
+.form__feedback-checkbox input::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 16px;
+  background: $color-transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  transition: $trans-easeinout;
+  appearance: none;
   opacity: 0;
 }
 
-.form__feedback-checkbox input:checked ~ .form__feedback-checkbox-span::after {
-  top: 11px;
-  left: -22px;
-  width: 6px;
+.form__feedback-checkbox input:checked::after {
+  top: 3px;
+  left: 2px;
+  width: 7px;
   height: 5px;
   border-color: $color-default-white;
-  border-radius: inherit;
+  border-radius: 0;
   border-top-style: none;
   border-right-style: none;
   border-width: 1.5px;
@@ -233,8 +236,14 @@
   opacity: 1;
 }
 
-.form__feedback-checkbox input:checked ~ .form__feedback-checkbox-span:hover::after,
-.form__feedback-checkbox input:checked ~ .form__feedback-checkbox-span:focus::after {
+.form__feedback-checkbox input:hover,
+.form__feedback-checkbox input:focus {
+  border: 1px solid $black-pearl-second;
+  box-shadow: none;
+}
+
+.form__feedback-checkbox input:checked:hover::after,
+.form__feedback-checkbox input:checked:focus::after {
   border-color: $black-pearl-second;
 }
 
@@ -274,7 +283,7 @@
   }
 
   .form__feedback-span {
-    top: 14px;
+    top: 11px;
   }
 
   .form__feedback-textarea textarea {
@@ -292,8 +301,18 @@
   }
 
   .form__feedback-checkbox {
-    width: 90%;
-    transform: translate(24px, 17px);
+    transform: translate(-1px, 17px);
+  }
+
+  .form__feedback-checkbox input {
+    margin-top: 7px;
+  }
+
+  .form__feedback-checkbox input,
+  .form__feedback-checkbox input::after {
+    width: 18px;
+    height: 15px;
+    padding: 0;
   }
 
   .form__feedback-checkbox-span::before {
@@ -339,6 +358,10 @@
     min-height: 180px;
   }
 
+  .form__feedback-span {
+    top: 13px;
+  }
+
   .form__feedback-textarea .form__feedback-span {
     top: -142px;
   }
@@ -350,15 +373,22 @@
   }
 
   .form__feedback-checkbox {
-    width: 90%;
-    transform: translate(30px, 10px);
+    transform: translate(5px, 10px);
   }
 
-  .form__feedback-checkbox-span::before {
-    top: 20%;
+  .form__feedback-checkbox input {
+    margin-top: 7px;
   }
 
-  .form__feedback-checkbox input:checked ~ .form__feedback-checkbox-span::after {
-    top: 30%;
+  .form__feedback-checkbox input,
+  .form__feedback-checkbox input::after {
+    width: 21px;
+    height: 14px;
+    padding: 0;
+  }
+
+  .form__feedback-checkbox input:checked::after {
+    width: 6px;
+    height: 4px;
   }
 }

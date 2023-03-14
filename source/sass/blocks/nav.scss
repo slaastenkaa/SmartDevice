@@ -70,11 +70,12 @@
 
 .nav__button {
   margin-left: auto;
-  transform: translate(-61px, 5px);
+  margin-right: 61px;
   padding: 10px 17px 13px 17px;
   color: $alice-blue-second;
   border: 1px solid $alice-blue-second;
   border-radius: 3px;
+  transform: translate(0, 5px);
   transition: $trans-easeinout;
 }
 
@@ -86,7 +87,7 @@
 
 .nav__button:active {
   opacity: 0.8;
-  transform: translate(-61px, 5px) $trans-scale3d;
+  transform: translate(0, 5px) $trans-scale3d;
 }
 
 @media (max-width: $vp-1023) {

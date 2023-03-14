@@ -72,8 +72,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 17px;
+    right: 16px;
     z-index: 1;
 
     width: 40px;
@@ -159,26 +159,30 @@
 }
 
 .form__feedback-checkbox--modal {
-  transform: translate(34px, -3px);
+  transform: translate(9px, -3px);
 }
 
-.form__feedback-checkbox-span--modal::before,
-.form__feedback-checkbox-span--modal::after {
-  top: 0.5px;
-  left: -25px;
+.form__feedback-checkbox--modal label {
+  gap: 10px;
 }
 
-.form__feedback-checkbox--modal input:checked ~ .form__feedback-checkbox-span--modal::after {
-  top: 3px;
-  left: -22px;
+.form__feedback-checkbox--modal input {
+  margin-top: 0;
+  width: 15px;
+  height: 14px;
+}
+
+.form__feedback-checkbox input:checked::after {
+  top: 2px;
+  left: 3px;
 }
 
 .modal__close-btn::before,
 .modal__close-btn::after {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 13px;
+  top: 18px;
+  left: 7px;
   width: 28px;
   height: 1px;
   background-color: $color-default-white;

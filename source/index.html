@@ -216,17 +216,17 @@
           </ul>
         </div>
       </section>
-      <section class="form" id="form">
+      <section class="form" id="form"> <!-- data-form-validate -->
         <div class="container form__container">
           <picture>
             <source type="image/webp" srcset="./img/paper_airplane.webp, ./img/paper_airplane@2x.webp 2x">
             <img src="./img/paper_airplane.png" loading="lazy" srcset="./img/paper_airplane@2x.png 2x" width="510"
               height="285" alt="Изображение бумажного самолета.">
           </picture>
-          <div class="form__feedback" data-form-validate>
+          <div class="form__feedback">
             <h2>Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
-            <form action="https://echo.htmlacademy.ru/" method="post">
+            <form action="https://echo.htmlacademy.ru/" method="get">
               <label for="name" data-required data-validate-type="text"
                 data-message-base="Данное поле необходимо заполнить">
                 <input id="name" type="text" name="Name" placeholder="Имя" required>
@@ -234,7 +234,7 @@
               </label>
               <label for="phone" data-required data-validate-type="phone"
                 data-message-base="Данное поле необходимо заполнить">
-                <input id="phone" type="tel" name="Name" placeholder="Телефон" required>
+                <input id="phone" type="tel" name="Phone" placeholder="Телефон" required>
                 <span class="form__feedback-span">Телефон</span>
               </label>
               <div class="form__feedback-textarea">
@@ -243,14 +243,14 @@
                   <span class="form__feedback-span">Ваш вопрос</span>
                 </label>
               </div>
-              <button class="form__feedback-button button" type="submit">Задать вопрос</button>
               <div class="form__feedback-checkbox">
                 <label for="checkbox" data-required data-validate-type="checkbox">
-                  <input class="visually-hidden" id="checkbox" type="checkbox" name="type"
-                    value="Я согласен на обработку персональных данных" required checked="">
+                  <input id="checkbox" type="checkbox" name="type"
+                  value="Я согласен на обработку персональных данных" required checked="">
                   <span class="form__feedback-checkbox-span">Я согласен на обработку персональных данных</span>
                 </label>
               </div>
+              <button class="form__feedback-button button" type="submit">Задать вопрос</button>
             </form>
           </div>
         </div>
@@ -354,10 +354,10 @@
             <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
-        <div class="form__feedback--modal form__feedback" data-form-validate>
+        <div class="form__feedback--modal form__feedback">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <form action="https://echo.htmlacademy.ru/" method="post">
+          <form action="https://echo.htmlacademy.ru/" method="get">
             <label for="name-modal" data-required data-validate-type="text"
               data-message-base="Данное поле необходимо заполнить">
               <input id="name-modal" type="text" name="name" placeholder="Имя" required>
@@ -374,14 +374,14 @@
                 <span class="form__feedback-span">Ваш вопрос</span>
               </label>
             </div>
-            <button class="form__feedback-button--modal form__feedback-button button" type="submit">Отправить</button>
             <div class="form__feedback-checkbox--modal form__feedback-checkbox ">
               <label for="checkbox-modal" data-required data-validate-type="checkbox">
-                <input class="visually-hidden" id="checkbox-modal" type="checkbox" name="type"
-                  value="Я согласен на обработку персональных данных" required checked="">
+                <input id="checkbox-modal" type="checkbox" name="type"
+                value="Я согласен на обработку персональных данных" required checked="">
                 <span class="form__feedback-checkbox-span--modal form__feedback-checkbox-span">Я согласен на обработку персональных данных</span>
               </label>
             </div>
+            <button class="form__feedback-button--modal form__feedback-button button" type="submit">Отправить</button>
           </form>
         </div>
       </div>

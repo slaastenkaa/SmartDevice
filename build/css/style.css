@@ -846,13 +846,14 @@ button,
 
 .nav__button {
   margin-left: auto;
-  -webkit-transform: translate(-61px, 5px);
-  -ms-transform: translate(-61px, 5px);
-  transform: translate(-61px, 5px);
+  margin-right: 61px;
   padding: 10px 17px 13px 17px;
   color: #f2f5f7;
   border: 1px solid #f2f5f7;
   border-radius: 3px;
+  -webkit-transform: translate(0, 5px);
+  -ms-transform: translate(0, 5px);
+  transform: translate(0, 5px);
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -866,8 +867,8 @@ button,
 
 .nav__button:active {
   opacity: 0.8;
-  -webkit-transform: translate(-61px, 5px) scale3d(1.02, 1.02, 1.02);
-  transform: translate(-61px, 5px) scale3d(1.02, 1.02, 1.02);
+  -webkit-transform: translate(0, 5px) scale3d(1.02, 1.02, 1.02);
+  transform: translate(0, 5px) scale3d(1.02, 1.02, 1.02);
 }
 
 .printed {
@@ -1333,6 +1334,7 @@ p.about__content-text-mobil {
 
 .form__feedback label {
   position: relative;
+  color: #ffffff;
 }
 
 .form__feedback-span {
@@ -1431,18 +1433,32 @@ p.about__content-text-mobil {
   box-shadow: 0 3px 10px #041427;
 }
 
-.form__feedback input:focus + .form__feedback-span,
-.form__feedback input:focus-within + .form__feedback-span {
-  top: -1px;
+.form__feedback input:not(:-moz-placeholder-shown) + .form__feedback-span,
+.form__feedback textarea:not(:-moz-placeholder-shown) + .form__feedback-span {
   font-size: 10px;
   opacity: 0.7;
+  transform: translate(0, -15px);
 }
 
-.form__feedback textarea:focus + .form__feedback-span,
-.form__feedback textarea:focus-within + .form__feedback-span {
-  top: -144px;
+.form__feedback input:not(:-ms-input-placeholder) + .form__feedback-span,
+.form__feedback textarea:not(:-ms-input-placeholder) + .form__feedback-span {
   font-size: 10px;
   opacity: 0.7;
+  -ms-transform: translate(0, -15px);
+  transform: translate(0, -15px);
+}
+
+.form__feedback input:not(:placeholder-shown) + .form__feedback-span,
+.form__feedback input:focus + .form__feedback-span,
+.form__feedback input:focus-within + .form__feedback-span,
+.form__feedback textarea:not(:placeholder-shown) + .form__feedback-span,
+.form__feedback textarea:focus + .form__feedback-span,
+.form__feedback textarea:focus-within + .form__feedback-span {
+  font-size: 10px;
+  opacity: 0.7;
+  -webkit-transform: translate(0, -15px);
+  -ms-transform: translate(0, -15px);
+  transform: translate(0, -15px);
 }
 
 .form__feedback-button {
@@ -1482,17 +1498,23 @@ p.about__content-text-mobil {
 }
 
 .form__feedback-checkbox {
-  -webkit-transform: translate(35px, 22px);
-  -ms-transform: translate(35px, 22px);
-  transform: translate(35px, 22px);
+  position: relative;
+  -webkit-transform: translate(9px, 22px);
+  -ms-transform: translate(9px, 22px);
+  transform: translate(9px, 22px);
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .form__feedback-checkbox label {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 11px;
 }
 
 .form__feedback-checkbox-span {
-  position: relative;
   display: block;
   padding: 0;
   font-family: "PTMono", "Courier New", monospace;
@@ -1520,39 +1542,48 @@ p.about__content-text-mobil {
   color: #041427;
 }
 
-.form__feedback-checkbox-span::before,
-.form__feedback-checkbox-span::after {
-  content: "";
-  position: absolute;
-  top: 7.5px;
-  left: -25px;
-  width: 15px;
-  height: 15px;
+.form__feedback-checkbox input {
+  position: relative;
+  display: block;
+  margin-top: 6px;
+  width: 21px;
+  height: 16px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0);
   border: 1px solid #ffffff;
   border-radius: 2px;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-.form__feedback-checkbox-span:hover::before,
-.form__feedback-checkbox-span:hover::after,
-.form__feedback-checkbox-span:focus::before,
-.form__feedback-checkbox-span:focus::after {
-  border-color: #041427;
-}
-
-.form__feedback-checkbox-span::after {
+.form__feedback-checkbox input::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   opacity: 0;
 }
 
-.form__feedback-checkbox input:checked ~ .form__feedback-checkbox-span::after {
-  top: 11px;
-  left: -22px;
-  width: 6px;
+.form__feedback-checkbox input:checked::after {
+  top: 3px;
+  left: 2px;
+  width: 7px;
   height: 5px;
   border-color: #ffffff;
-  border-radius: inherit;
+  border-radius: 0;
   border-top-style: none;
   border-right-style: none;
   border-width: 1.5px;
@@ -1562,8 +1593,15 @@ p.about__content-text-mobil {
   opacity: 1;
 }
 
-.form__feedback-checkbox input:checked ~ .form__feedback-checkbox-span:hover::after,
-.form__feedback-checkbox input:checked ~ .form__feedback-checkbox-span:focus::after {
+.form__feedback-checkbox input:hover,
+.form__feedback-checkbox input:focus {
+  border: 1px solid #041427;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form__feedback-checkbox input:checked:hover::after,
+.form__feedback-checkbox input:checked:focus::after {
   border-color: #041427;
 }
 
@@ -1872,8 +1910,8 @@ p.about__content-text-mobil {
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 17px;
+  right: 16px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -1965,28 +2003,32 @@ p.about__content-text-mobil {
 }
 
 .form__feedback-checkbox--modal {
-  -webkit-transform: translate(34px, -3px);
-  -ms-transform: translate(34px, -3px);
-  transform: translate(34px, -3px);
+  -webkit-transform: translate(9px, -3px);
+  -ms-transform: translate(9px, -3px);
+  transform: translate(9px, -3px);
 }
 
-.form__feedback-checkbox-span--modal::before,
-.form__feedback-checkbox-span--modal::after {
-  top: 0.5px;
-  left: -25px;
+.form__feedback-checkbox--modal label {
+  gap: 10px;
 }
 
-.form__feedback-checkbox--modal input:checked ~ .form__feedback-checkbox-span--modal::after {
-  top: 3px;
-  left: -22px;
+.form__feedback-checkbox--modal input {
+  margin-top: 0;
+  width: 15px;
+  height: 14px;
+}
+
+.form__feedback-checkbox input:checked::after {
+  top: 2px;
+  left: 3px;
 }
 
 .modal__close-btn::before,
 .modal__close-btn::after {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 13px;
+  top: 18px;
+  left: 7px;
   width: 28px;
   height: 1px;
   background-color: #ffffff;
@@ -2810,7 +2852,7 @@ p.about__content-text-mobil {
   }
 
   .form__feedback-span {
-    top: 14px;
+    top: 11px;
   }
 
   .form__feedback-textarea textarea {
@@ -2830,10 +2872,20 @@ p.about__content-text-mobil {
   }
 
   .form__feedback-checkbox {
-    width: 90%;
-    -webkit-transform: translate(24px, 17px);
-    -ms-transform: translate(24px, 17px);
-    transform: translate(24px, 17px);
+    -webkit-transform: translate(-1px, 17px);
+    -ms-transform: translate(-1px, 17px);
+    transform: translate(-1px, 17px);
+  }
+
+  .form__feedback-checkbox input {
+    margin-top: 7px;
+  }
+
+  .form__feedback-checkbox input,
+  .form__feedback-checkbox input::after {
+    width: 18px;
+    height: 15px;
+    padding: 0;
   }
 
   .form__feedback-checkbox-span::before {
@@ -3162,6 +3214,10 @@ p.about__content-text-mobil {
     min-height: 180px;
   }
 
+  .form__feedback-span {
+    top: 13px;
+  }
+
   .form__feedback-textarea .form__feedback-span {
     top: -142px;
   }
@@ -3175,18 +3231,25 @@ p.about__content-text-mobil {
   }
 
   .form__feedback-checkbox {
-    width: 90%;
-    -webkit-transform: translate(30px, 10px);
-    -ms-transform: translate(30px, 10px);
-    transform: translate(30px, 10px);
+    -webkit-transform: translate(5px, 10px);
+    -ms-transform: translate(5px, 10px);
+    transform: translate(5px, 10px);
   }
 
-  .form__feedback-checkbox-span::before {
-    top: 20%;
+  .form__feedback-checkbox input {
+    margin-top: 7px;
   }
 
-  .form__feedback-checkbox input:checked ~ .form__feedback-checkbox-span::after {
-    top: 30%;
+  .form__feedback-checkbox input,
+  .form__feedback-checkbox input::after {
+    width: 21px;
+    height: 14px;
+    padding: 0;
+  }
+
+  .form__feedback-checkbox input:checked::after {
+    width: 6px;
+    height: 4px;
   }
 
   .footer {
