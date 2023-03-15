@@ -216,7 +216,7 @@
           </ul>
         </div>
       </section>
-      <section class="form" id="form"> <!-- data-form-validate -->
+      <section class="form" id="form" data-form-validate data-callback="base"> <!-- -->
         <div class="container form__container">
           <picture>
             <source type="image/webp" srcset="./img/paper_airplane.webp, ./img/paper_airplane@2x.webp 2x">
@@ -345,7 +345,7 @@
   </div>
 
   <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
+  <div class="modal modal--preload" data-form-validate data-callback="base" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content form">
